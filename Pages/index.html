@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../Styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <p>BR.CRAFT</p>
+        </div>
+        <div class="pages">
+          <ul>
+            <li><a id="lienHome" href="./index.html">Home</a></li>
+            <li><a id="lienAbout" href="./about.html">About</a></li>
+            <li><a id="lienAgenda" href="./agenda.html">Agenda</a></li>
+            <li><a id="lienSponsor" href="./sponsor.html">Sponsor</a></li>
+            <li><a id="lienFAQs" href="./FAQs.html">FAQs</a></li>
+            <li><a id="lienContact" href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="hamburger" onclick="toggleNavbar()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <script>
+          function toggleNavbar() {
+            var navbar = document.getElementById("navbar");
+            navbar.classList.toggle("responsive");
+          }
+          var lienHome = document.getElementById("lienHome");
+          var lienAbout = document.getElementById("lienAbout");
+          var lienAgenda = document.getElementById("lienAgenda");
+          var lienSponsor = document.getElementById("lienSponsor");
+          var lienFAQs = document.getElementById("lienFAQs");
+          var lienContact = document.getElementById("lienContact");
+
+          lienAbout.addEventListener("click", function () {
+            window.location.href = "./about.html";
+          });
+          lienAgenda.addEventListener("click", function () {
+            window.location.href = "./agenda.html";
+          });
+          lienSponsor.addEventListener("click", function () {
+            window.location.href = "./sponsor.html";
+          });
+          lienFAQs.addEventListener("click", function () {
+            window.location.href = "./FAQs.html";
+          });
+          lienContact.addEventListener("click", function () {
+            window.location.href = "./contact.html";
+          });
+        </script>
+      </div>
+      <div class="home">
+        <div class="home-left">
+          <div class="left-top">
+            <p>Be Creative and bring your team to win !</p>
+          </div>
+          <div class="left-bottom">
+            <div class="date">
+              <i class="fa-regular fa-calendar-minus"></i>
+              <p>11th,February,2024</p>
+            </div>
+            <div class="location">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>ESI,Ecole nationale superieure de l'informatique d'Alger</p>
+            </div>
+            <div class="home-btns">
+              <a href="./register.html">
+                <button class="register">Registre</button>
+              </a>
+              <a href="./about.html">
+                <button class="learn-more">Learn more</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="home-right">
+          <img src="../Assets/home.png" alt="" class="img-home" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

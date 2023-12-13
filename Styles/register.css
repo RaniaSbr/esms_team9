@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@700&family=Nunito+Sans:ital,wght@1,600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,100&family=Readex+Pro:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Readex Pro", sans-serif;
+}
+:root {
+  --lightblue: #7faecb;
+  --darkblue: #20447e;
+  --pink: #d58585;
+  --yellow: #ffcd18;
+  --lightgrey: #dfd7d7;
+}
+.register-page {
+  background-color: rgba(255, 205, 24, 0.1);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: flex-end;
+}
+.register-right {
+  background-color: var(--pink);
+  width: 40vw;
+  height: 100vh;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  position: relative;
+  z-index: 1;
+}
+.craft-reg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+}
+.craft-reg img {
+  height: 200px;
+}
+.cse-reg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.cse-reg img {
+  height: 100px;
+  margin-right: 30px;
+  margin-bottom: 50px;
+}
+.form {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.form input {
+  border: none;
+  border-radius: 20px;
+  background-color: var(--lightgrey);
+  height: 40px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+  margin: 20px 0;
+}
+.form label {
+  margin-left: 20px;
+}
+.h {
+  color: var(--yellow);
+  text-decoration: underline;
+  text-align: center;
+}
+.reg-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.reg-btn button {
+  border: none;
+  box-shadow: 0 5px #999;
+}
+
+.reg-btn button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(10px);
+}
+
+.reg-btn button {
+  border: none;
+  margin-top: 30px;
+  height: 45px;
+  width: 160px;
+  background-color: var(--yellow);
+  border-radius: 30px;
+  color: #20447e;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.reg {
+  font-size: 30px;
+  color: var(--darkblue);
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  text-align: start;
+  width: 50%;
+}
+
+.register-left {
+  width: 50vw;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+}
+.bc {
+  position: relative;
+  width: 50vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 30px;
+  margin-left: 30px;
+}
+@media only screen and (max-width: 1024px) {
+  .register-page {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center; /* Ajustez cela selon vos besoins */
+    justify-content: center; /* Ajustez cela selon vos besoins */
+    height: 120vh;
+  }
+  .bc {
+    display: none;
+  }
+  .register-page {
+    background-color: var(--pink);
+    width: 100vw;
+  }
+  .register-left {
+    height: 80vh;
+    background-color: #fffae8;
+    width: 100vw;
+    height: 140vh;
+    border-top-left-radius: 80px;
+  }
+  .reg-btn {
+    margin-bottom: 40px;
+  }
+
+  .craft-reg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+  }
+  .craft-reg img {
+    height: 100px;
+  }
+  .register-right {
+    background-color: none;
+    width: 100vw;
+    height: 100%;
+  }
+  .cse-reg {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    margin-top: 40px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+  }
+  .cse-reg img {
+    height: 60px;
+  }
+}

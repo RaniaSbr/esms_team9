@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="../Styles/FAQs.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="FAQ">
+      <div class="navbar">
+        <div class="logo">
+          <p>BR.CRAFT</p>
+        </div>
+        <div class="pages" id="navbar">
+          <ul>
+            <li><a id="lienHome" href="./index.html">Home</a></li>
+            <li><a id="lienAbout" href="./about.html">About</a></li>
+            <li><a id="lienAgenda" href="./agenda.html">Agenda</a></li>
+            <li><a id="lienSponsor" href="./sponsor.html">Sponsor</a></li>
+            <li><a id="lienFAQs" href="./FAQs.html">FAQs</a></li>
+            <li><a id="lienContact" href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="hamburger" onclick="toggleNavbar()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <script>
+          function toggleNavbar() {
+            var navbar = document.getElementById("navbar");
+            navbar.classList.toggle("responsive");
+          }
+          var lienHome = document.getElementById("lienHome");
+          var lienAbout = document.getElementById("lienAbout");
+          var lienAgenda = document.getElementById("lienAgenda");
+          var lienSponsor = document.getElementById("lienSponsor");
+          var lienFAQs = document.getElementById("lienFAQs");
+          var lienContact = document.getElementById("lienContact");
+
+          lienAbout.addEventListener("click", function () {
+            window.location.href = "./about.html";
+          });
+          lienAgenda.addEventListener("click", function () {
+            window.location.href = "./agenda.html";
+          });
+          lienSponsor.addEventListener("click", function () {
+            window.location.href = "./sponsor.html";
+          });
+          lienFAQs.addEventListener("click", function () {
+            window.location.href = "./FAQs.html";
+          });
+          lienContact.addEventListener("click", function () {
+            window.location.href = "./contact.html";
+          });
+        </script>
+      </div>
+      <div class="top-FAQ">
+        <p>Our sponsors:</p>
+        <div class="sponsors">
+          <img src="../Assets/android.png" alt="" />
+          <img src="../Assets/apple.png" alt="" />
+          <img src="../Assets/hp.png" alt="" />
+          <img src="../Assets/naftal.png" alt="" />
+        </div>
+      </div>
+
+      <p class="FAQ-p">FAQS</p>
+      <div class="FAQs">
+        <div class="left-FAQs">
+          <div class="qst-rep">
+            <button
+              class="question"
+              onclick="toggleReponse('reponse1', 'icon1')"
+            >
+              <p>Question</p>
+              <i id="icon1" class="fa-regular fa-circle-down"> </i>
+            </button>
+            <div id="reponse1" class="reponse">Answer</div>
+          </div>
+
+          <button class="question" onclick="toggleReponse('reponse2', 'icon2')">
+            <p>Question</p>
+            <i id="icon2" class="fa-regular fa-circle-down"></i>
+          </button>
+          <div id="reponse2" class="reponse">Answer</div>
+
+          <button class="question" onclick="toggleReponse('reponse3', 'icon3')">
+            <p>Question</p>
+            <i id="icon3" class="fa-regular fa-circle-down"></i>
+          </button>
+          <div id="reponse3" class="reponse">Answer</div>
+
+          <button class="question" onclick="toggleReponse('reponse4', 'icon4')">
+            <p>Question</p>
+            <i id="icon4" class="fa-regular fa-circle-down"></i>
+          </button>
+          <div id="reponse4" class="reponse">Answer</div>
+        </div>
+        <div class="right-FAQs">
+          <img src="../Assets/Sponsor.png" alt="" />
+        </div>
+      </div>
+      <div class="footer">
+        <img src="../Assets/Footer.png" alt="" />
+        <p>Contact Us</p>
+        <div class="socialmedia">
+          <ul>
+            <li>
+              <a href=""
+                ><i class="fa-brands fa-instagram" style="color: #d58585"></i
+              ></a>
+            </li>
+            <li>
+              <a href=""
+                ><i class="fa-brands fa-twitter" style="color: #d58585"></i
+              ></a>
+            </li>
+            <li>
+              <a href=""
+                ><i class="fa-brands fa-facebook-f" style="color: #d58585"></i
+              ></a>
+            </li>
+            <li>
+              <a href=""
+                ><i class="fa-brands fa-github" style="color: #d58585"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <script>
+        function toggleReponse(idReponse, idIcon) {
+          var reponse = document.getElementById(idReponse);
+          var icon = document.getElementById(idIcon);
+
+          var isReponseVisible =
+            window.getComputedStyle(reponse).display !== "none";
+
+          if (!isReponseVisible) {
+            reponse.style.display = "block";
+            icon.style.transform = "rotateX(180deg)";
+          } else {
+            reponse.style.display = "none";
+            icon.style.transform = "rotateX(0deg)";
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>
