@@ -23,12 +23,18 @@
   height: 85px;
 }
 .logo {
-  width: 150px;
+  width: 250px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   margin-left: 50px;
   font-size: 30px;
+  font-weight: bold;
+  color: var(--lightblue);
+}
+.logo img {
+  height: 50px;
+  margin-right: 10px;
 }
 .pages {
   width: 100%;
@@ -167,6 +173,7 @@
     width: 50%;
     justify-content: flex-end;
   }
+
   .left-top {
     width: 80vw;
     font-size: 30px;
