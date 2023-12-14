@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background: var(--background, #FFFBEB);
+}
+
+.calendar-container {
+  text-align: center;
+  padding: 5px;
+  border-radius: 8px;
+
+}
+
+h1 {
+  color: #333;
+  font-family: 'Katibeh';
+}
+p{
+  background-color: #DFD7D7;
+  border-radius: 25px;
+  padding: 5px;
+  font-family:  "Readex Pro";
+}
+button{
+background-color: #20447E;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: "Readex Pro";
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+h2{
+  font-family:"Readex Pro" ;
+}
