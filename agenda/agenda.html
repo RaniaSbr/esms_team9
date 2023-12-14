@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./agenda.css" />
+    <title>Event Calendar</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./agenda.css">
-  <title>Event Calendar</title>
-</head>
-
-<body>
-
-  <div class="calendar-container">
-    <h1>Event Calendar</h1>
-    <button onclick="toggleAgenda('day1')">Toggle Day 1 Agenda</button>
-    <button onclick="toggleAgenda('day2')">Toggle Day 2 Agenda</button>
-    <button onclick="toggleAgenda('day3')">Toggle Day 3 Agenda</button>
-    <div id="agenda-output">
+  <body>
+    <div class="calendar-container">
+      <div class="navbar">
+        <div class="logo-nav">
+          <img src="../Assets/Fichier 2@2x.png" alt="" />
+          <p>Br Craft</p>
+        </div>
+        <div class="pages" id="navbar">
+          <ul>
+            <li><a id="lienHome" href="../Pages/index.html">Home</a></li>
+            <li><a id="lienAbout" href="../ABOUT-page/dev.html">About</a></li>
+            <li><a id="lienAgenda" href="../agenda/agenda.html">Agenda</a></li>
+            <li><a id="lienFAQs" href="../Pages/FAQs.html">FAQs</a></li>
+            <li><a id="lienFAQs" href="../Pages/FAQs.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="hamburger" onclick="toggleNavbar()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <h1>Event Calendar</h1>
+      <button onclick="toggleAgenda('day1')">Toggle Day 1 Agenda</button>
+      <button onclick="toggleAgenda('day2')">Toggle Day 2 Agenda</button>
+      <button onclick="toggleAgenda('day3')">Toggle Day 3 Agenda</button>
+      <div id="agenda-output">
         <h2>Day 1 Agenda</h2>
         <p>08:00 - 08:30 - Check-in</p>
         <p>08:30 - 09:00 - Opening Ceremony</p>
@@ -25,10 +41,63 @@
         <p>16:30 - 18:00 - Coffee break and some fun activities</p>
         <p>18:00 - 20:00 - Workshops</p>
         <p>20:00 - 21:00 - Dinner Break</p>
+      </div>
     </div>
-  </div>
 
-  <script src="./agenda.js"></script>
-</body>
+    <script src="./agenda.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var lienHome = document.getElementById("lienHome");
 
+        lienHome.addEventListener("click", function () {
+          window.location.href = "../Pages/index.html";
+        });
+
+        var lienAbout = document.getElementById("lienAbout");
+        var lienAgenda = document.getElementById("lienAgenda");
+        var lienFAQs = document.getElementById("lienFAQs");
+        var lienContact = document.getElementById("lienContact");
+
+        function toggleReponse(idReponse, idIcon) {
+          var reponse = document.getElementById(idReponse);
+          var icon = document.getElementById(idIcon);
+
+          var isReponseVisible =
+            window.getComputedStyle(reponse).display !== "none";
+
+          if (!isReponseVisible) {
+            reponse.style.display = "block";
+            icon.style.transform = "rotateX(180deg)";
+          } else {
+            reponse.style.display = "none";
+            icon.style.transform = "rotateX(0deg)";
+          }
+        }
+
+        lienAbout.addEventListener("click", function () {
+          window.location.href = "../ABOUT-page/dev.html";
+        });
+
+        lienAgenda.addEventListener("click", function () {
+          window.location.href = "../agenda/agenda.html";
+        });
+
+        lienFAQs.addEventListener("click", function () {
+          window.location.href = "../Pages/FAQs.html";
+        });
+
+        lienContact.addEventListener("click", function () {
+          window.location.href = "../Pages/FAQs.html";
+        });
+
+        var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", toggleNavbar);
+
+        function toggleNavbar() {
+          var navbar = document.getElementById("navbar");
+          navbar.classList.toggle("responsive");
+        }
+      });
+    </script>
+  </body>
 </html>

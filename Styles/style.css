@@ -1,8 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@700&family=Nunito+Sans:ital,wght@1,600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,100&family=Readex+Pro:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@700&family=Katibeh&family=Nunito+Sans:ital,wght@1,600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,100&family=Readex+Pro:wght@300;400;600&display=swap");
 * {
   padding: 0;
   margin: 0;
-  font-family: "Readex Pro", sans-serif;
 }
 :root {
   --lightblue: #7faecb;
@@ -17,6 +16,8 @@
   height: 120vh;
 }
 .navbar {
+  font-family: "Readex Pro", sans-serif;
+
   display: flex;
   align-items: center;
   width: 100%;
@@ -53,12 +54,14 @@
   font-size: 20px;
 }
 .pages a {
-  color: black;
+  color: var(--darkblue);
+  font-family: "Readex Pro", sans-serif;
 }
 .home {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
+  font-family: "Readex Pro", sans-serif;
 }
 .home-right img {
   height: 80vh;
@@ -73,10 +76,11 @@
   color: var(--darkblue);
 }
 .left-top {
-  font-size: 50px;
+  font-size: 70px;
   width: 600px;
   margin-left: 70px;
-  font-weight: bolder;
+  font-weight: 500;
+  font-family: "Katibeh", serif !important;
 }
 
 .location,

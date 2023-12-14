@@ -32,32 +32,6 @@
         <div class="hamburger" onclick="toggleNavbar()">
           <i class="fa-solid fa-bars"></i>
         </div>
-        <script>
-          function toggleNavbar() {
-            var navbar = document.getElementById("navbar");
-            navbar.classList.toggle("responsive");
-          }
-          var lienHome = document.getElementById("lienHome");
-          var lienAbout = document.getElementById("lienAbout");
-          var lienAgenda = document.getElementById("lienAgenda");
-          var lienSponsor = document.getElementById("lienSponsor");
-          var lienFAQs = document.getElementById("lienFAQs");
-          var lienContact = document.getElementById("lienContact");
-
-          lienAbout.addEventListener("click", function () {
-            window.location.href = "./about.html";
-          });
-          lienAgenda.addEventListener("click", function () {
-            window.location.href = "./agenda.html";
-          });
-
-          lienFAQs.addEventListener("click", function () {
-            window.location.href = "./FAQs.html";
-          });
-          lienContact.addEventListener("click", function () {
-            window.location.href = "./contact.html";
-          });
-        </script>
       </div>
       <div class="top-FAQ">
         <p>Our sponsors:</p>
@@ -110,47 +84,62 @@
         <p>Contact Us</p>
         <div class="socialmedia">
           <ul>
-            <li>
-              <a href=""
-                ><i class="fa-brands fa-instagram" style="color: #d58585"></i
-              ></a>
-            </li>
-            <li>
-              <a href=""
-                ><i class="fa-brands fa-twitter" style="color: #d58585"></i
-              ></a>
-            </li>
-            <li>
-              <a href=""
-                ><i class="fa-brands fa-facebook-f" style="color: #d58585"></i
-              ></a>
-            </li>
-            <li>
-              <a href=""
-                ><i class="fa-brands fa-github" style="color: #d58585"></i
-              ></a>
-            </li>
+            <a href="https://www.instagram.com/votre_compte"
+              ><i class="fa-brands fa-instagram" style="color: #d58585"></i
+            ></a>
+            <a href="https://twitter.com/votre_compte"
+              ><i class="fa-brands fa-twitter" style="color: #d58585"></i
+            ></a>
+            <a href="https://www.facebook.com/votre_page"
+              ><i class="fa-brands fa-facebook-f" style="color: #d58585"></i
+            ></a>
+            <a href="https://github.com/votre_compte"
+              ><i class="fa-brands fa-github" style="color: #d58585"></i
+            ></a>
           </ul>
         </div>
       </div>
-
-      <script>
-        function toggleReponse(idReponse, idIcon) {
-          var reponse = document.getElementById(idReponse);
-          var icon = document.getElementById(idIcon);
-
-          var isReponseVisible =
-            window.getComputedStyle(reponse).display !== "none";
-
-          if (!isReponseVisible) {
-            reponse.style.display = "block";
-            icon.style.transform = "rotateX(180deg)";
-          } else {
-            reponse.style.display = "none";
-            icon.style.transform = "rotateX(0deg)";
-          }
-        }
-      </script>
     </div>
+    <script>
+      function toggleNavbar() {
+        var navbar = document.getElementById("navbar");
+        navbar.classList.toggle("responsive");
+      }
+      var lienHome = document.getElementById("lienHome");
+      var lienAbout = document.getElementById("lienAbout");
+      var lienAgenda = document.getElementById("lienAgenda");
+      var lienSponsor = document.getElementById("lienSponsor");
+      var lienFAQs = document.getElementById("lienFAQs");
+      var lienContact = document.getElementById("lienContact");
+
+      lienAbout.addEventListener("click", function () {
+        window.location.href = "./about.html";
+      });
+      lienAgenda.addEventListener("click", function () {
+        window.location.href = "./agenda.html";
+      });
+
+      lienFAQs.addEventListener("click", function () {
+        window.location.href = "./FAQs.html";
+      });
+      lienContact.addEventListener("click", function () {
+        window.location.href = "./contact.html";
+      });
+      function toggleReponse(idReponse, idIcon) {
+        var reponse = document.getElementById(idReponse);
+        var icon = document.getElementById(idIcon);
+
+        var isReponseVisible =
+          window.getComputedStyle(reponse).display !== "none";
+
+        if (!isReponseVisible) {
+          reponse.style.display = "block";
+          icon.style.transform = "rotateX(180deg)";
+        } else {
+          reponse.style.display = "none";
+          icon.style.transform = "rotateX(0deg)";
+        }
+      }
+    </script>
   </body>
 </html>

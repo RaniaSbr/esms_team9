@@ -22,11 +22,11 @@
         </div>
         <div class="pages" id="navbar">
           <ul>
-            <li><a id="lienHome" href="./index.html">Home</a></li>
-            <li><a id="lienAbout" href="./about.html">About</a></li>
-            <li><a id="lienAgenda" href="./agenda.html">Agenda</a></li>
-            <li><a id="lienFAQs" href="./FAQs.html">FAQs</a></li>
-            <li><a id="lienContact" href="./contact.html">Contact</a></li>
+            <li><a id="lienHome" href="../Pages/index.html">Home</a></li>
+            <li><a id="lienAbout" href="../ABOUT-page/dev.html">About</a></li>
+            <li><a id="lienAgenda" href="../agenda/agenda.html">Agenda</a></li>
+            <li><a id="lienFAQs" href="../Pages/FAQs.html">FAQs</a></li>
+            <li><a id="lienFAQs" href="../Pages/FAQs.html">Contact</a></li>
           </ul>
         </div>
         <div class="hamburger" onclick="toggleNavbar()">
@@ -39,7 +39,6 @@
             var lienAgenda = document.getElementById("lienAgenda");
             var lienSponsor = document.getElementById("lienSponsor");
             var lienFAQs = document.getElementById("lienFAQs");
-            var lienContact = document.getElementById("lienContact");
 
             function toggleReponse(idReponse, idIcon) {
               var reponse = document.getElementById(idReponse);
@@ -61,7 +60,7 @@
             }
 
             lienHome.addEventListener("click", function () {
-              window.location.href = "./index.html";
+              window.location.href = "../Pages/index.html";
             });
             lienAbout.addEventListener("click", function () {
               window.location.href = "./about.html";
@@ -74,7 +73,7 @@
               window.location.href = "./FAQs.html";
             });
             lienContact.addEventListener("click", function () {
-              window.location.href = "./contact.html";
+              window.location.href = "./FAQs.html";
             });
 
             var hamburger = document.querySelector(".hamburger");
@@ -105,7 +104,7 @@
               <a href="./register.html">
                 <button class="register">Registre</button>
               </a>
-              <a href="./about.html">
+              <a href="../ABOUT-page/dev.html">
                 <button class="learn-more">Learn more</button>
               </a>
             </div>
